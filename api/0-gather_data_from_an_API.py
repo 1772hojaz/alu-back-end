@@ -19,8 +19,8 @@ def fetch_employee_tasks(emp_id):
     user_data = user_resp.json()
     employee_name = user_data.get("name", "Unknown")
 
-    todo_url = "https://jsonplaceholder.typicode.com/todos?userId={}".format(emp_id)
-    todo_response = requests.get(todo_url)
+    t_ul="https://jsonplaceholder.typicode.com/todos?userId={}".format(emp_id)
+    todo_response = requests.get(t_ul)
     todos = todo_response.json()
 
     total_tasks = len(todos)
