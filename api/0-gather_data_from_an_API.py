@@ -7,14 +7,11 @@ placeholder API (https://jsonplaceholder.typicode.com). The module can be used a
 or imported into other Python programs.
 """
 
-
-import sys
 import requests
+import sys
 
 
-#fetching employee tasks
 def fetch_employee_tasks(employee_id):
-
     user_url = "https://jsonplaceholder.typicode.com/users/{}".format(employee_id)
     user_resp = requests.get(user_url)
     user_data = user_resp.json()
@@ -32,9 +29,9 @@ def fetch_employee_tasks(employee_id):
     for task in completed_tasks:
         print("\t", task.get("title", "Unknown Task"))
 
-if __name__ == "__main__":
-#taking input from the command line
-    employee_id = sys.argv[1]
-#calling the fetch_employee funtion
-    fetch_employee_tasks(employee_id)
 
+if __name__ == "__main__":
+    # Taking input from the command line
+    employee_id = sys.argv[1]
+    # Calling the fetch_employee function
+    fetch_employee_tasks(employee_id)
