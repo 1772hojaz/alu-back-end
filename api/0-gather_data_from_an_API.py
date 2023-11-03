@@ -28,8 +28,7 @@ def fetch_employee_tasks(emp_id):
     number_of_done_tasks = len(completed_tasks)
 
     print("Employee {} is done with tasks({}/{})".format(
-    employee_name, number_of_done_tasks, total_tasks
-))
+    employee_name, number_of_done_tasks, total_tasks))
     for task in completed_tasks:
         print("\t", task.get("title", "Unknown Task"))
 
