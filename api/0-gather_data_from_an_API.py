@@ -34,6 +34,6 @@ def fetch_employee_tasks(emp_id):
 
 if __name__ == "__main__":
     # Taking input from the command line
-    employee_id = sys.argv[1]
+    emp_id = sys.argv[1]
     # Calling the fetch_employee function
     fetch_employee_tasks(emp_id)
