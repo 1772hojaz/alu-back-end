@@ -2,10 +2,10 @@
 """
 Module: fetch_employee_tasks
 
-This module provides functionality to fetch and print details about an 
+This module provides functionality to fetch and print details about an
 employee's tasks from the
-placeholder API (https://jsonplaceholder.typicode.com). 
-The module can be used as a standalone script 
+placeholder API (https://jsonplaceholder.typicode.com).
+The module can be used as a standalone script
 or imported into other Python programs.
 """
 
@@ -13,13 +13,13 @@ import requests
 import sys
 
 
-def fetch_employee_tasks(employee_id):
-    user_url = "https://jsonplaceholder.typicode.com/users/{}".format(employee_id)
+def fetch_employee_tasks(emp_id):
+    user_url = "https://jsonplaceholder.typicode.com/users/{}".format(emp_id)
     user_resp = requests.get(user_url)
     user_data = user_resp.json()
     employee_name = user_data.get("name", "Unknown")
 
-    todo_url = "https://jsonplaceholder.typicode.com/todos?userId={}".format(employee_id)
+    todo_url = "https://jsonplaceholder.typicode.com/todos?userId={}".format(emp_id)
     todo_response = requests.get(todo_url)
     todos = todo_response.json()
 
@@ -36,4 +36,4 @@ if __name__ == "__main__":
     # Taking input from the command line
     employee_id = sys.argv[1]
     # Calling the fetch_employee function
-    fetch_employee_tasks(employee_id)
+    fetch_employee_tasks(emp_id)
