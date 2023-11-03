@@ -2,7 +2,9 @@
 import requests
 import sys
 
+#fetching employee tasks
 def fetch_employee_tasks(employee_id):
+
     user_url = "https://jsonplaceholder.typicode.com/users/{}".format(employee_id)
     user_resp = requests.get(user_url)
     user_data = user_resp.json()
@@ -21,6 +23,8 @@ def fetch_employee_tasks(employee_id):
         print("\t", task.get("title", "Unknown Task"))
 
 if __name__ == "__main__":
+#taking input from the command line
     employee_id = sys.argv[1]
+#calling the fetch_employee funtion
     fetch_employee_tasks(employee_id)
 
