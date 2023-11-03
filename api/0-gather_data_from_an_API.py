@@ -6,6 +6,8 @@ This module provides functionality to fetch and print details about an employee'
 placeholder API (https://jsonplaceholder.typicode.com). The module can be used as a standalone script 
 or imported into other Python programs.
 """
+
+
 import sys
 import requests
 
