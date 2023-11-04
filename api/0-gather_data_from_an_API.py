@@ -1,12 +1,8 @@
 #!/usr/bin/python3
 """
 Module: fetch_employee_tasks
-
 This module provides functionality to fetch and print details about an
-employee's tasks from the
-placeholder API (https://jsonplaceholder.typicode.com).
-The module can be used as a standalone script
-or imported into other Python programs.
+employee's tasks 
 """
 import requests
 import sys
