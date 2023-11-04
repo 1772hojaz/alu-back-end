@@ -2,7 +2,7 @@
 """
 Module: fetch_employee_tasks
 This module provides functionality to fetch and print details about an
-employee's tasks 
+employee's tasks
 """
 import requests
 import sys
