@@ -8,9 +8,8 @@ placeholder API (https://jsonplaceholder.typicode.com).
 The module can be used as a standalone script
 or imported into other Python programs.
 """
-
-import sys
 import requests
+import sys
 
 
 def fetch_employee_tasks(emp_id):
@@ -28,7 +27,7 @@ def fetch_employee_tasks(emp_id):
     number_of_done_tasks = len(completed_tasks)
 
     print("Employee {} is done with tasks({}/{})".format(
-    employee_name, number_of_done_tasks, total_tasks))
+    	 employee_name, number_of_done_tasks, total_tasks))
     for task in completed_tasks:
         print("\t", task.get("title", "Unknown Task"))
 
