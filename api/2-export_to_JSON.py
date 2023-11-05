@@ -8,6 +8,7 @@ import json
 import requests
 import sys
 
+
 def fetch_employee_tasks(emp_id):
     user_url = "https://jsonplaceholder.typicode.com/users/{}".format(emp_id)
     user_resp = requests.get(user_url)
@@ -33,3 +34,4 @@ def fetch_employee_tasks(emp_id):
 if __name__ == "__main__":
     emp_id = sys.argv[1]
     fetch_employee_tasks(emp_id)
+    
