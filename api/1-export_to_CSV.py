@@ -5,9 +5,9 @@ Python script to export data in the CSV format.
 """
 
 
+import csv
 import requests
 import sys
-import csv
 
 
 def fetch_employee_tasks(emp_id):

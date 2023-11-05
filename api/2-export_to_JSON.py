@@ -4,9 +4,9 @@
 """
 Python script to export data in the JSON format.
 """
+import json
 import requests
 import sys
-import json
 
 def fetch_employee_tasks(emp_id):
     user_url = "https://jsonplaceholder.typicode.com/users/{}".format(emp_id)
