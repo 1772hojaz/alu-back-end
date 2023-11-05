@@ -34,4 +34,3 @@ def fetch_employee_tasks(emp_id):
 if __name__ == "__main__":
     emp_id = sys.argv[1]
     fetch_employee_tasks(emp_id)
-    
