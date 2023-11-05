@@ -1,15 +1,17 @@
 #!/usr/bin/python3
 
 
-""" 
+"""
 Python script to export data in the JSON format.
 """
 import json
 import requests
 
+
 def get_json_from_url(url):
     response = requests.get(url)
     return response.json()
+
 
 def fetch_data():
     users = get_json_from_url("https://jsonplaceholder.typicode.com/users")
@@ -29,10 +31,11 @@ def fetch_data():
             "task": todo["title"],
             "completed": todo["completed"]
         }
-        
+
         tasks_by_user[user_id].append(task)
 
     return tasks_by_user
+
 
 def main():
     data = fetch_data()
