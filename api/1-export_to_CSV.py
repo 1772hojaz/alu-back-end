@@ -24,7 +24,9 @@ def fetch_employee_tasks(emp_id):
         writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
         for task in todos:
             writer.writerow(
-                [emp_id, username, task.get("completed", False), task.get("title")])
+                [emp_id, username, task.get(
+                    "completed", False), task.get(
+                        "title")])
 
 if __name__ == "__main__":
     emp_id = sys.argv[1]
