@@ -20,7 +20,8 @@ def fetch_data():
     for todo in todos:
         user_id = str(todo["userId"])
         if user_id not in tasks_by_user:
-            user = next(user for user in users if user["id"] == todo["userId"])
+            user = next(
+                user for user in users if user["id"] == todo["userId"])
             tasks_by_user[user_id] = []
 
         task = {
